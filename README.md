@@ -23,7 +23,7 @@ An advanced research assistant that leverages the power of Ollama with the Deeps
 1. Clone the repository:
 ```bash
 git clone https://github.com/maigenai/mai_searcher.git
-cd mai-research-assistant
+cd mai_searcher
 ```
 
 2. Create and activate a virtual environment:
