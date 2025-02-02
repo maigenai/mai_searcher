@@ -1,114 +1,114 @@
 # mAI Research Assistant
 
-Un assistente di ricerca avanzato che sfrutta la potenza di Ollama con il modello Deepseek-R1 8B per generare risposte dettagliate e ben strutturate basate su ricerche web in tempo reale.
+An advanced research assistant that leverages the power of Ollama with the Deepseek-R1 8B model to generate detailed and well-structured responses based on real-time web research.
 
-## 🌟 Caratteristiche Principali
+## 🌟 Key Features
 
-- 🤖 **Modello Avanzato**: Utilizza Deepseek-R1 8B tramite Ollama per generare risposte di alta qualità
-- 🔍 **Ricerca Web Intelligente**: Integrazione con Tavily per ricerche web accurate e pertinenti
-- 📝 **Risposte Strutturate**: Genera contenuti ben organizzati con introduzione, principi fondamentali ed esempi pratici
-- 💾 **Caching Efficiente**: Sistema di cache integrato per ottimizzare le prestazioni
-- 🎯 **Analisi Contestuale**: Sintetizza e analizza multiple fonti per risposte complete
-- 🖥️ **Interfaccia Web**: UI moderna e responsive costruita con Streamlit
+- 🤖 **Advanced Model**: Uses Deepseek-R1 8B through Ollama for high-quality response generation
+- 🔍 **Intelligent Web Search**: Integration with Tavily for accurate and relevant web searches
+- 📝 **Structured Responses**: Generates well-organized content with introduction, key principles, and practical examples
+- 💾 **Efficient Caching**: Built-in caching system for optimized performance
+- 🎯 **Contextual Analysis**: Synthesizes and analyzes multiple sources for comprehensive responses
+- 🖥️ **Web Interface**: Modern and responsive UI built with Streamlit
 
-## 📋 Prerequisiti
+## 📋 Prerequisites
 
-- Python 3.8 o superiore
-- Ollama installato e configurato ([Guida Installazione Ollama](https://github.com/ollama/ollama))
-- Modello Deepseek-R1 8B installato in Ollama
-- Chiave API Tavily per le ricerche web
+- Python 3.8 or higher
+- Ollama installed and configured ([Ollama Installation Guide](https://github.com/ollama/ollama))
+- Deepseek-R1 8B model installed in Ollama
+- Tavily API key for web searches
 
-## 🛠️ Installazione
+## 🛠️ Installation
 
-1. Clona il repository:
+1. Clone the repository:
 ```bash
-git clone https://github.com/tuonome/mai-research-assistant.git
+git clone https://github.com/maigenai/mai_searcher.git
 cd mai-research-assistant
 ```
 
-2. Crea e attiva un ambiente virtuale:
+2. Create and activate a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# oppure
+# or
 .\venv\Scripts\activate  # Windows
 ```
 
-3. Installa le dipendenze:
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Configura le variabili d'ambiente:
+4. Configure environment variables:
 ```bash
 export TAVILY_API_KEY='your-api-key'
 ```
 
-## 🚀 Avvio
+## 🚀 Getting Started
 
-1. Assicurati che Ollama sia in esecuzione e che il modello Deepseek-R1 sia disponibile:
+1. Ensure Ollama is running and the Deepseek-R1 model is available:
 ```bash
 ollama pull deepseek-r1:8b
 ollama run deepseek-r1:8b
 ```
 
-2. Avvia l'applicazione:
+2. Launch the application:
 ```bash
 streamlit run app.py
 ```
 
-3. Apri il browser all'indirizzo http://localhost:8501
+3. Open your browser at http://localhost:8501
 
-## ⚙️ Configurazione
+## ⚙️ Configuration
 
-Le impostazioni principali sono gestite tramite il dizionario `CONFIG` nel codice:
+Main settings are managed through the `CONFIG` dictionary in the code:
 
 ```python
 CONFIG = {
-    "MODEL_NAME": "deepseek-r1:8b",    # Modello Ollama da utilizzare
-    "MAX_SEARCH_RESULTS": 3,           # Numero massimo di risultati di ricerca
-    "CACHE_SIZE": 100                  # Dimensione della cache
+    "MODEL_NAME": "deepseek-r1:8b",    # Ollama model to use
+    "MAX_SEARCH_RESULTS": 3,           # Maximum number of search results
+    "CACHE_SIZE": 100                  # Cache size
 }
 ```
 
-## 🏗️ Struttura del Progetto
+## 🏗️ Project Structure
 
 ```
 mai-research-assistant/
-├── app.py              # Applicazione principale
-├── requirements.txt    # Dipendenze
-├── .env               # Configurazione variabili d'ambiente (da creare)
-└── README.md          # Documentazione
+├── app.py              # Main application
+├── requirements.txt    # Dependencies
+├── .env               # Environment variables configuration (create this)
+└── README.md          # Documentation
 ```
 
 ## 🔄 Workflow
 
-1. L'utente inserisce una query di ricerca
-2. Il sistema esegue una ricerca web tramite Tavily
-3. I risultati vengono analizzati e sintetizzati dal modello Deepseek-R1
-4. Viene generata una risposta strutturata con:
-   - Introduzione
-   - Principi fondamentali
-   - Esempi pratici
-   - Conclusioni
-5. Le fonti consultate vengono mostrate con link diretti
+1. User inputs a research query
+2. System performs web search through Tavily
+3. Results are analyzed and synthesized by the Deepseek-R1 model
+4. A structured response is generated with:
+   - Introduction
+   - Key principles
+   - Practical examples
+   - Conclusions
+5. Consulted sources are displayed with direct links
 
-## 🤝 Come Contribuire
+## 🤝 How to Contribute
 
-1. Fai un fork del repository
-2. Crea un branch per la tua feature (`git checkout -b feature/NuovaFeature`)
-3. Committa le tue modifiche (`git commit -m 'Aggiunta nuova feature'`)
-4. Pusha al branch (`git push origin feature/NuovaFeature`)
-5. Apri una Pull Request
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
 
-## 📄 Licenza
+## 📄 License
 
-Questo progetto è distribuito sotto licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## 🙏 Ringraziamenti
+## 🙏 Acknowledgments
 
-- [Ollama](https://ollama.ai/) per l'hosting locale di modelli LLM
-- [Deepseek](https://github.com/deepseek-ai/DeepSeek-LLM) per il modello linguistico R1 8B
-- [LangChain](https://github.com/langchain-ai/langchain) per il framework di orchestrazione
-- [Streamlit](https://streamlit.io/) per il framework web
-- [Tavily](https://tavily.com/) per l'API di ricerca web
+- [Ollama](https://ollama.ai/) for local LLM hosting
+- [Deepseek](https://github.com/deepseek-ai/DeepSeek-LLM) for the R1 8B language model
+- [LangChain](https://github.com/langchain-ai/langchain) for the orchestration framework
+- [Streamlit](https://streamlit.io/) for the web framework
+- [Tavily](https://tavily.com/) for the web search API
